@@ -1,0 +1,55 @@
+python .\main.py
+connected
+System 809E (unknown)
+Area 0000--FFFE
+  Area 1000--11FF
+    Random Service 64: write with key & read with key (0x1008 0x100A)
+    Area 1200--12FF
+    Random Service 72: write with key & read with key (0x1208 0x120A)
+    Cyclic Service 72: write with key & read with key (0x120C 0x120E)
+    Purse Service 72: direct with key & cashback with key & decrement with key & read with key (0x1210 0x1212 0x1214 0x1216)
+    Random Service 73: write with key & read with key (0x1248 0x124A)
+    Random Service 74: write with key & read with key (0x1288 0x128A)
+    Random Service 700: write with key & read w/o key (0xAF08 0xAF0B)
+     0000: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 |................|
+    Random Service 701: write w/o key (0xAF49)
+     0000: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 |................|
+     *     00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 |................|
+     002D: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 |................|
+System FE00 (Common Area)
+Area 0000--FFFE
+  Area 1A80--1AFF
+    Area 1A81--1AFF
+      Random Service 106: write with key & read w/o key (0x1A88 0x1A8B)
+       0000: 00 00 32 30 31 32 32 30 32 37 00 00 00 00 31 00 |..20122027....1.|
+       0001: 83 4e 83 89 83 43 83 56 81 40 83 5e 83 43 83 4c |.N...C.V.@.^.C.L|
+       0002: 31 35 30 31 32 33 39 34 32 30 32 32 30 34 30 31 |1501239420220401|
+       0003: 32 30 32 36 30 33 33 31 41 48 32 38 30 33 33 39 |20260331AH280339|
+      Area 1B00--1B3F
+      Area 1B01--1B3F
+        Random Service 108: write with key & read with key (0x1B08 0x1B0A)
+        Area 1B40--1B7F
+        Area 1B41--1B7F
+          Random Service 109: write with key & read with key (0x1B48 0x1B4A)
+          Area 42C0--42FF
+          Area 42C1--42FF
+            Random Service 267: write with key & read with key (0x42C8 0x42CA)
+            Area 4300--433F
+            Area 4301--433F
+              Random Service 268: write with key & read with key (0x4308 0x430A)
+              Area 4340--437F
+              Area 4341--437F
+                Random Service 269: write with key & read w/o key (0x4348 0x434B)
+                 0000: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 |................|
+                 *     00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 |................|
+                 0002: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 |................|
+                Area 7A00--7A3F
+                Area 7A01--7A3F
+                  Random Service 488: write with key & read with key & read w/o key (0x7A08 0x7A0A 0x7A0B)
+                   0000: 33 39 32 31 30 31 30 30 31 30 36 37 35 39 34 39 |3921010010675949|
+                  Area 7A40--7A7F
+                  Area 7A41--7A7F
+                    Random Service 489: write w/o key & read w/o key (0x7A49 0x7A4B)
+                     0000: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 |................|
+                     *     00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 |................|
+                     000B: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 |................|
