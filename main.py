@@ -1,25 +1,32 @@
 import nfc
+from typing import cast
+
+service_code_list = [
+    {0x1A8B: [0, 1, 2, 3]},
+    {0x434B: [0, 2]},
+    {0x7A0B: [0]},
+    {0x7A4B: [0, "B"]},
+]
 
 
-def on_connect(tag: nfc.tag.Tag) -> bool:
-    print("connected")
-    if isinstance(tag, nfc.tag.tt3.Type3Tag):
-        try:
-            print("\n".join(tag.dump()))  # タグの全情報を表示
-        except nfc.tag.tt3.Type3TagCommandError:
-            print("Type3TagCommandError occurred")
-    # elif isinstance(tag, nfc.tag.tt2.Type2Tag):
-    #     print(tag.identifier)  # タグの識別子を表示
-    # elif isinstance(tag, nfc.tag.tt4.Type4Tag):
-    #     print(tag.product)  # タグの製品名を表示
-    # 他のタグタイプに対する処理...
-    return True
+def on_connect(tag):
+    global service_code_list
+    print(tag)
 
+    sys_code = 0xFE00
+    idm, pmm = tag.polling(system_code=sys_code)
+    tag.idm, tag.pmm, tag.sys = idm, pmm, sys_code
 
-def on_release(tag: nfc.tag.Tag) -> None:
-    print("released")
+    for i in range(len(service_code_list)):
+        for key, value in service_code_list[i].items():
+            print(key, value)
+            sc = nfc.tag.tt3.ServiceCode(key >> 6, key & 0x3F)
+            for j in range(len(value)):
+                bc = nfc.tag.tt3.BlockCode(j, service=0)
+                data = cast(bytearray, tag.read_without_encryption([sc], [bc]))
+                decode_data = data.decode("shift_jis")
+                print("\t" + str(decode_data))
 
 
 with nfc.ContactlessFrontend("usb") as clf:
-    while True:
-        clf.connect(rdwr={"on-connect": on_connect, "on-release": on_release})
+    clf.connect(rdwr={"on-connect": on_connect})
