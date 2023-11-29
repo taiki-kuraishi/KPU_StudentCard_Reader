@@ -6,7 +6,7 @@
 - RC-S380/S
 - 対応OS : win10,win11
 
-https://www.sony.co.jp/Products/felica/business/products/reader/RC-S380.html
+[ソニー株式会社 | FeliCa | 法人のお客様 | 製品情報 | リーダー／ライター | RC-S380/S](https://www.sony.co.jp/Products/felica/business/products/reader/RC-S380.html)
 
 # 環境構築
 1. Zadigのダウンロード
@@ -241,8 +241,6 @@ https://github.com/taiki-kuraishi/KPU_StudentCard_Reader
 
 # 参考文献
 
-[nfcpy公式ドキュメント](https://nfcpy.readthedocs.io/en/latest/topics/get-started.html)
-[NFCリーダー+Python+nfcpyで学生証の情報を読み取る](https://zenn.dev/3w36zj6/articles/d3894e83cb7423
-)
-[nfcpy で複数の System Code を持つ NFC タグを扱う方法](https://uchan.hateblo.jp/entry/2016/11/18/190237
-)
+[nfcpy公式ドキュメント](https://nfcpy.readthedocs.io/en/latest/topics/get-started.html)<br>
+[NFCリーダー+Python+nfcpyで学生証の情報を読み取る](https://zenn.dev/3w36zj6/articles/d3894e83cb7423)<br>
+[nfcpy で複数の System Code を持つ NFC タグを扱う方法](https://uchan.hateblo.jp/entry/2016/11/18/190237)<br>
